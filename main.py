@@ -45,4 +45,4 @@ for r in range(2, maxRow + 1):
 
 # Write JSON file
 with open("brother_info.json", "w") as outfile:
-    json.dump(json_data, outfile)
+    json.dump(json_data, outfile, indent=4)

@@ -23,7 +23,6 @@ json_data = {"brothers": []}
 for r in range(2, maxRow + 1):
     brother = {}
     for c in range(1, maxCol + 1):
-        print(ws1.cell(row=r, column=c).value)
         if c == 1:
             brother["id"] = ws1.cell(row=r, column=c).value
         if c == 2:
@@ -41,7 +40,7 @@ for r in range(2, maxRow + 1):
         if c == 8:
             brother["profile_url"] = ws1.cell(row=r, column=c).value
         if c > 8:
-            print("ERROR: Column is " + str(c) + ", Cell Value is " + str(ws1.cell(row=r, column=c).value))
+            raise Exception("ERROR: Column is " + str(c) + ", Cell Value is " + str(ws1.cell(row=r, column=c).value))
     json_data["brothers"].append(brother)
 
 # Write JSON file

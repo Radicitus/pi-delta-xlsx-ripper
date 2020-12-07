@@ -3,7 +3,7 @@ import os
 import json
 
 # Get file path
-filepath = input("Please type in the document name.") or "TT Brothers Information"
+filepath = input("Please type in the document name (Press RETURN to default to 'TT Brothers Information')") or "TT Brothers Information"
 path = os.getcwd()
 filepath = path + "/" + filepath + ".xlsx"
 
